@@ -1,0 +1,18 @@
+{
+  "name": "Chrome Search Engine Transfer",
+  "description": "Chrome Search Engine Transfer",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+
+  "browser_action": {
+    "default_icon": "src/assets/icon.png"
+  },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "src/js/form_submission.js"],
+      "matches": [ "http://*/*", "https://*/*"]
+   } ],
+  "permissions": [ "http://*/*", "https://*/*", "storage"],
+
+  "options_page": "src/options.html"
+}
